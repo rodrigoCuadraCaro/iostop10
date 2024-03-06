@@ -11,6 +11,12 @@
 		133487232B9814A200885379 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487222B9814A200885379 /* ContentView.swift */; };
 		133487252B9814A200885379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133487242B9814A200885379 /* Assets.xcassets */; };
 		133487282B9814A200885379 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133487272B9814A200885379 /* Preview Assets.xcassets */; };
+		133487342B9815FB00885379 /* tunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487332B9815FB00885379 /* tunesAPI.swift */; };
+		133487362B981FC500885379 /* TopSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487352B981FC500885379 /* TopSongs.swift */; };
+		133487382B98216100885379 /* TopSongsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487372B98216100885379 /* TopSongsRepo.swift */; };
+		1334873A2B98230E00885379 /* TopSongsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487392B98230E00885379 /* TopSongsController.swift */; };
+		1334873D2B983C3700885379 /* TopSongsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334873C2B983C3700885379 /* TopSongsList.swift */; };
+		1334873F2B983F8100885379 /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334873E2B983F8100885379 /* SongDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		133487222B9814A200885379 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		133487242B9814A200885379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133487272B9814A200885379 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		133487332B9815FB00885379 /* tunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tunesAPI.swift; sourceTree = "<group>"; };
+		133487352B981FC500885379 /* TopSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongs.swift; sourceTree = "<group>"; };
+		133487372B98216100885379 /* TopSongsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongsRepo.swift; sourceTree = "<group>"; };
+		133487392B98230E00885379 /* TopSongsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongsController.swift; sourceTree = "<group>"; };
+		1334873C2B983C3700885379 /* TopSongsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSongsList.swift; sourceTree = "<group>"; };
+		1334873E2B983F8100885379 /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,12 @@
 		1334871F2B9814A200885379 /* womptecnica */ = {
 			isa = PBXGroup;
 			children = (
+				1334873B2B983C2600885379 /* Components */,
+				133487322B9815E300885379 /* API */,
+				133487312B9814D300885379 /* Controllers */,
+				133487302B9814C300885379 /* Repositories */,
+				1334872F2B9814BA00885379 /* Views */,
+				1334872E2B9814B200885379 /* Models */,
 				133487202B9814A200885379 /* womptecnicaApp.swift */,
 				133487222B9814A200885379 /* ContentView.swift */,
 				133487242B9814A200885379 /* Assets.xcassets */,
@@ -65,6 +83,54 @@
 				133487272B9814A200885379 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1334872E2B9814B200885379 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				133487352B981FC500885379 /* TopSongs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1334872F2B9814BA00885379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1334873E2B983F8100885379 /* SongDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		133487302B9814C300885379 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				133487372B98216100885379 /* TopSongsRepo.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		133487312B9814D300885379 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				133487392B98230E00885379 /* TopSongsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		133487322B9815E300885379 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				133487332B9815FB00885379 /* tunesAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1334873B2B983C2600885379 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1334873C2B983C3700885379 /* TopSongsList.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +205,12 @@
 			files = (
 				133487232B9814A200885379 /* ContentView.swift in Sources */,
 				133487212B9814A200885379 /* womptecnicaApp.swift in Sources */,
+				133487362B981FC500885379 /* TopSongs.swift in Sources */,
+				133487382B98216100885379 /* TopSongsRepo.swift in Sources */,
+				1334873F2B983F8100885379 /* SongDetailView.swift in Sources */,
+				1334873D2B983C3700885379 /* TopSongsList.swift in Sources */,
+				1334873A2B98230E00885379 /* TopSongsController.swift in Sources */,
+				133487342B9815FB00885379 /* tunesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

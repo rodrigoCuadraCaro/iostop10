@@ -27,7 +27,6 @@ class TopSongsController: ObservableObject {
                         }
                     }
                     self.topsongs += uniqueSongs
-                    print(self.topsongs[0])
                 case .failure(let error):
                     print("Error getting songs!: \(error)")
                 }

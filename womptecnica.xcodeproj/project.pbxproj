@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		133487212B9814A200885379 /* womptecnicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487202B9814A200885379 /* womptecnicaApp.swift */; };
-		133487232B9814A200885379 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487222B9814A200885379 /* ContentView.swift */; };
+		133487232B9814A200885379 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487222B9814A200885379 /* MainView.swift */; };
 		133487252B9814A200885379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133487242B9814A200885379 /* Assets.xcassets */; };
 		133487282B9814A200885379 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133487272B9814A200885379 /* Preview Assets.xcassets */; };
 		133487342B9815FB00885379 /* tunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487332B9815FB00885379 /* tunesAPI.swift */; };
@@ -17,12 +17,13 @@
 		1334873A2B98230E00885379 /* TopSongsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133487392B98230E00885379 /* TopSongsController.swift */; };
 		1334873D2B983C3700885379 /* TopSongsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334873C2B983C3700885379 /* TopSongsList.swift */; };
 		1334873F2B983F8100885379 /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1334873E2B983F8100885379 /* SongDetailView.swift */; };
+		13D8BC952B98F22B001FBE4E /* MarqueeText in Frameworks */ = {isa = PBXBuildFile; productRef = 13D8BC942B98F22B001FBE4E /* MarqueeText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1334871D2B9814A200885379 /* womptecnica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = womptecnica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133487202B9814A200885379 /* womptecnicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = womptecnicaApp.swift; sourceTree = "<group>"; };
-		133487222B9814A200885379 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		133487222B9814A200885379 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		133487242B9814A200885379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133487272B9814A200885379 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		133487332B9815FB00885379 /* tunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tunesAPI.swift; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D8BC952B98F22B001FBE4E /* MarqueeText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +72,7 @@
 				1334872F2B9814BA00885379 /* Views */,
 				1334872E2B9814B200885379 /* Models */,
 				133487202B9814A200885379 /* womptecnicaApp.swift */,
-				133487222B9814A200885379 /* ContentView.swift */,
+				133487222B9814A200885379 /* MainView.swift */,
 				133487242B9814A200885379 /* Assets.xcassets */,
 				133487262B9814A200885379 /* Preview Content */,
 			);
@@ -149,6 +151,9 @@
 			dependencies = (
 			);
 			name = womptecnica;
+			packageProductDependencies = (
+				13D8BC942B98F22B001FBE4E /* MarqueeText */,
+			);
 			productName = womptecnica;
 			productReference = 1334871D2B9814A200885379 /* womptecnica.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +182,9 @@
 				Base,
 			);
 			mainGroup = 133487142B9814A200885379;
+			packageReferences = (
+				13D8BC932B98F22B001FBE4E /* XCRemoteSwiftPackageReference "MarqueeText" */,
+			);
 			productRefGroup = 1334871E2B9814A200885379 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133487232B9814A200885379 /* ContentView.swift in Sources */,
+				133487232B9814A200885379 /* MainView.swift in Sources */,
 				133487212B9814A200885379 /* womptecnicaApp.swift in Sources */,
 				133487362B981FC500885379 /* TopSongs.swift in Sources */,
 				133487382B98216100885379 /* TopSongsRepo.swift in Sources */,
@@ -416,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13D8BC932B98F22B001FBE4E /* XCRemoteSwiftPackageReference "MarqueeText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joekndy/MarqueeText";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13D8BC942B98F22B001FBE4E /* MarqueeText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13D8BC932B98F22B001FBE4E /* XCRemoteSwiftPackageReference "MarqueeText" */;
+			productName = MarqueeText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 133487152B9814A200885379 /* Project object */;
 }

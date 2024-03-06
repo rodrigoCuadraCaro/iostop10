@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarqueeText
 
 struct SongDetailView: View {
     
@@ -14,12 +15,6 @@ struct SongDetailView: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Image(systemName: "star")
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .topTrailing)
-                    .padding(.horizontal)
-                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-            }
             AsyncImage(
                 url: URL(string: song.artworkUrl100 ?? "none")) {
                     phase in if let cover = phase.image {
@@ -32,59 +27,49 @@ struct SongDetailView: View {
                         ProgressView().progressViewStyle(.circular)
                     }
                 }
-            .frame(width: 250, height: 250)
-            VStack {
-                if isTextOverflowing {
-                    // Apply animation only when text is overflowing
-                    Text("This is a long text that overflows")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .lineLimit(1)
-                        .padding()
-                        .background(
-                            GeometryReader { proxy in
-                                Color.clear
-                                    .onAppear {
-                                        // Check if text is overflowing
-                                        let isOverflowing = proxy.size.width < proxy.frame(in: .local).size.width
-                                        withAnimation {
-                                            self.isTextOverflowing = isOverflowing
-                                        }
-                                    }
-                            }
-                        )
-                } else {
-                    // Default state without animation
-                    Text(song.trackCensoredName ?? "song name")
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .lineLimit(1)
-                        .padding()
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                }
+                .frame(width: 250, height: 250)
+            VStack{
+                MarqueeText(text: song.trackCensoredName ?? "", font: .systemFont(ofSize: 30, weight: .bold), leftFade: 10, rightFade: 10, startDelay: 2, alignment: .center)
+                Text(song.collectionCensoredName ?? "album name").font(.title2)
+                    .padding(.bottom, 5.0)
+                Text(song.artistName ?? "artist name").font(.title3)
             }
-            Text(song.collectionCensoredName ?? "album name").font(.title2)
-                .padding(.bottom, 5.0)
-            Text(song.artistName ?? "artist name").font(.title3)
+            .padding()
             Spacer()
-            Button {
-                print(song.trackViewURL ?? "xddd")
-                if let url = URL(string: song.trackViewURL ?? "") {
-                   UIApplication.shared.open(url)
+            VStack{
+                Button {
+                    
+                } label: {
+                    HStack{
+                        Image(systemName: "star.fill").foregroundStyle(.white)
+                        Text("Agregar a favoritos")
+                            .padding()
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                    }
+                    .frame(width: 230)
+                    .background(Color.indigo)
+                    .clipShape(.capsule)
+                }.padding(.bottom, 16)
+                Button {
+                    if let url = URL(string: song.trackViewURL ?? "") {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    HStack{
+                        Image(systemName: "music.note").foregroundStyle(.white)
+                        Text("Reproduce esta cancion")
+                            .padding()
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                    }
+                    .frame(width: 350)
+                    .background(Color.red)
+                    .clipShape(.capsule)
                 }
-            } label: {
-                HStack{
-                    Image(systemName: "music.note").foregroundStyle(.white)
-                    Text("Reproduce esta cancion")
-                        .padding()
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                }
-                .frame(width: 350)
-                .background(Color.red)
-                .clipShape(.capsule)
+
             }
-            
-        }
-        .padding()
+        }.padding()
     }
 }
 
